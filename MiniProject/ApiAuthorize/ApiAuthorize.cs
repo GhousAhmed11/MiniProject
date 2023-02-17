@@ -29,7 +29,6 @@ namespace MiniProject.ApiAuthorize
             {
                 await UnauthorizedRsp();
             }
-            string x = "";
             string jwtToken = requestHeaderApiValue.ToString().Split(' ')[1];
             var handler = new JwtSecurityTokenHandler();
             var tokenObj = handler.ReadToken(jwtToken) as JwtSecurityToken;
