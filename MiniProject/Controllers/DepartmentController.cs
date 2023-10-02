@@ -20,7 +20,7 @@ namespace MiniProject.Controllers
             _departmentRepo = departmentRepo;
 
         }
-        [ApiAuthorize.ApiAuthorize(UserRole.Admin)]
+        //[ApiAuthorize.ApiAuthorize(UserRole.Admin)]
         [HttpPost("department")]
         public async Task<DepartmentDTO> AddDepartment(DepartmentDTO department)
         {

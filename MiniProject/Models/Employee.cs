@@ -14,5 +14,6 @@ namespace MiniProject.Models
         [ForeignKey("Department")]
         public int? DepartmentId { get; set; }
         public Department Department { get; set; }
+        public string ExtraData { get; set; }
     }
 }

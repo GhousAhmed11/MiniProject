@@ -6,5 +6,6 @@
         public string Contact { get; set; }
         public string Email { get; set; }
         public int? DepartmentId { get; set; }
+        public ExtraDTO Extra { get; set; }
     }
 }
