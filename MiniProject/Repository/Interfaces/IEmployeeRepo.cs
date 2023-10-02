@@ -11,5 +11,8 @@ namespace MiniProject.Repository.Interfaces
         Task<IEnumerable<Employees>> ViewEmployees();
         Task<Employees> ViewEmployee(int id);
         Task<EditEmployeeDTO> EditEmployee(EditEmployeeDTO editEmployeeDTO);
+        Task<EmployeeDTO> AddEmployeeWithExtra(EmployeeDTO employeeDTO);
+        Task<EmployeeDTO> ViewEmployeeWithExtra(int id);
+
     }
 }

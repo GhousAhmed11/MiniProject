@@ -18,7 +18,7 @@ namespace MiniProject.Controllers
         {
             _EmployeeRepo = employeeRepo;
         }
-        [ApiAuthorize.ApiAuthorize(UserRole.Admin)]
+        //[ApiAuthorize.ApiAuthorize(UserRole.Admin)]
         [HttpPost("employee")]
         public async Task<EmployeeDTO> AddEmployee(EmployeeDTO Employee)
         {
@@ -45,6 +45,20 @@ namespace MiniProject.Controllers
         public async Task<EditEmployeeDTO> EditEmployee(EditEmployeeDTO editEmployeeDTO)
         {
             var res = await _EmployeeRepo.EditEmployee(editEmployeeDTO);
+            return res;
+        }
+
+        [HttpPost("employee-extra")]
+        public async Task<EmployeeDTO> AddEmployeeWithExtra(EmployeeDTO Employee)
+        {
+            var res = await _EmployeeRepo.AddEmployeeWithExtra(Employee);
+            return res;
+        }
+
+        [HttpGet("employee-detail-extra")]
+        public async Task<EmployeeDTO> ViewEmployeeWithExtra(int id)
+        {
+            var res = await _EmployeeRepo.ViewEmployeeWithExtra(id);
             return res;
         }
     }
