@@ -22,7 +22,9 @@ export default class AdminLogin extends Component {
             empId: this.state.empId,
             password: this.state.password
         };
-        console.log('test33');
+
+        console.log('gtyfytfytf');
+
         axios.post(`https://localhost:44368/api/AppUser/login`, user)
             .then(res => {
                 localStorage.setItem("token", res.data);
