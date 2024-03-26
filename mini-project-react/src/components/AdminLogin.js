@@ -12,7 +12,7 @@ export default class AdminLogin extends Component {
     componentDidMount() {
         localStorage.clear();
         localStorage.setItem("AdminAuth", false);
-        localStorage.setItem("auth", false);
+        localStorage.setItem("auth", true);
     }
 
     handleSubmit = event => {
@@ -22,7 +22,7 @@ export default class AdminLogin extends Component {
             empId: this.state.empId,
             password: this.state.password
         };
-        console.log(user);
+        console.log('empId');
         axios.post(`https://localhost:44368/api/AppUser/login`, user)
             .then(res => {
                 localStorage.setItem("token", res.data);
